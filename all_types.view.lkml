@@ -21,4 +21,10 @@ view: all_types {
     type: count
     drill_fields: []
   }
+
+  measure: sum_distinct {
+    type: sum_distinct
+    sql_distinct_key: ${this_string} ;;
+    sql: ${this_int} ;;
+  }
 }
